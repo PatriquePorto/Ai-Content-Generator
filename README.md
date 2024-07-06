@@ -10,20 +10,20 @@
 
 <br>
 
-## 💻 Project
+## 💻 Project:
 
 <p dir="auto">Ai content generator</p>
 
 - A powerful and user-friendly AI content generation app built with cutting-edge technologies to streamline content creation and empower users of all skill levels.
 
-## 🚀 Tecnologies
+## 🚀 Tecnologies:
 
 - Frontend: Next.js
 - Styling: Tailwind CSS
 - Programming Language: JavaScript
 - Large Language Model: Google Gemini
-
-- Features:
+ 
+## 🛠️ Features:
 
 - Content Generation: Generate various content formats (for blog posts, blog titles, blog content, youtube description, youtube tags, social media content ideas, instagram posts and #) based on user input and preferences.
 - Topic Exploration: Suggest relevant topics and keywords to spark content ideas.
@@ -32,7 +32,7 @@
 - User-Friendly Interface: Intuitive and visually appealing design for a seamless user experience.
 - Customization Options: Choose from a variety of design templates and personalize the app's look and feel.
 
-- Benefits
+## ✨ Benefits
 
 - Increased Efficiency: Saves time and resources by automating content creation tasks.
 - Content Quality: Creates high-quality, engaging content that resonates with target audiences.
