@@ -14,7 +14,7 @@
 
 <p dir="auto">Ai content generator</p>
 
-- A powerful and user-friendly AI content generation app built with cutting-edge technologies to streamline content creation and empower users of all skill levels.
+- A powerful and user-friendly AI content generation app with various type template, to built with cutting-edge technologies to streamline content creation and empower users of all skill levels.
 
 ## 🚀 Tecnologies:
 
@@ -22,6 +22,8 @@
 - Styling: Tailwind CSS
 - Programming Language: JavaScript
 - Large Language Model: Google Gemini
+- PostgreSQL
+- Drizzle Orm
  
 ## 🛠️ Features:
 
