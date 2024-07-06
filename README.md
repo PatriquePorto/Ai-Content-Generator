@@ -4,7 +4,6 @@
 <img src="/diagram.png" width="100%"></img>
 </br>
 
-
 </br>
 <img src="/preview.png" width="100%"></img>
 </br>
@@ -15,29 +14,31 @@
 
 <p dir="auto">Ai content generator</p>
 
-A powerful and user-friendly AI content generation app built with cutting-edge technologies to streamline content creation and empower users of all skill levels.
+- A powerful and user-friendly AI content generation app built with cutting-edge technologies to streamline content creation and empower users of all skill levels.
 
 ## 🚀 Tecnologies
 
-Frontend: Next.js
-Styling: Tailwind CSS
-Programming Language: JavaScript
-Large Language Model: Google Gemini
-Features
+- Frontend: Next.js
+- Styling: Tailwind CSS
+- Programming Language: JavaScript
+- Large Language Model: Google Gemini
 
-Content Generation: Generate various content formats (for blog posts, blog titles, blog content, youtube description, youtube tags, social media content ideas, instagram posts and #) based on user input and preferences.
-Topic Exploration: Suggest relevant topics and keywords to spark content ideas.
-Real-Time Editing: Edit and refine the AI-generated content directly within the app.
-Integration with Google Gemini: Leverage the power of Google's advanced large language model for exceptional quality and accuracy.
-User-Friendly Interface: Intuitive and visually appealing design for a seamless user experience.
-Customization Options: Choose from a variety of design templates and personalize the app's look and feel.
-Benefits
+- Features:
 
-Increased Efficiency: Saves time and resources by automating content creation tasks.
-Content Quality: Creates high-quality, engaging content that resonates with target audiences.
-Reduced Writer's Block: Overcomes writer's block and provides inspiration for content creation.
-Scalability: Easily generates content in bulk for various marketing needs.
-Accessibility: Enables anyone, regardless of writing experience, to create compelling content.
+- Content Generation: Generate various content formats (for blog posts, blog titles, blog content, youtube description, youtube tags, social media content ideas, instagram posts and #) based on user input and preferences.
+- Topic Exploration: Suggest relevant topics and keywords to spark content ideas.
+- Real-Time Editing: Edit and refine the AI-generated content directly within the app.
+- Integration with Google Gemini: Leverage the power of Google's advanced large language model for exceptional quality and accuracy.
+- User-Friendly Interface: Intuitive and visually appealing design for a seamless user experience.
+- Customization Options: Choose from a variety of design templates and personalize the app's look and feel.
+
+- Benefits
+
+- Increased Efficiency: Saves time and resources by automating content creation tasks.
+- Content Quality: Creates high-quality, engaging content that resonates with target audiences.
+- Reduced Writer's Block: Overcomes writer's block and provides inspiration for content creation.
+- Scalability: Easily generates content in bulk for various marketing needs.
+- Accessibility: Enables anyone, regardless of writing experience, to create compelling content.
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
