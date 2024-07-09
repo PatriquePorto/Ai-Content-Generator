@@ -8,6 +8,10 @@ import Templates from '@/app/(data)/Templates'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { chatSession } from '@/utils/AiModal'
+import { db } from '@/utils/db'
+import { AIOutput } from '@/utils/schema'
+import { useUser } from '@clerk/nextjs'
+import moment from 'moment'
 
 interface PROPS {
 
@@ -22,6 +26,7 @@ function CreateNewContent (props: PROPS)  {
     const selectedTemplate:TEMPLATE | undefined = Templates?.find((item) => item.slug == props.params['template-slug'])
     const [loading, setLoading] = useState(false)
     const [aiOutput, setAiOutput] = useState('')
+    const { user } = useUser()
     const GenerateAIContent = async (formData:any) => {
           setLoading(true)
           const SelectedPrompt = selectedTemplate?.aiPrompt
@@ -30,9 +35,21 @@ function CreateNewContent (props: PROPS)  {
 
           const result = await chatSession.sendMessage(FinalAIPrompt)
 
-          console.log(result.response.text())
           setAiOutput(result?.response.text())
+          await SaveInDb(formData, selectedTemplate?.slug, aiOutput)
           setLoading(false)
+    }
+
+    const SaveInDb = async (formData:any, slug:any, aiResp: string) => {
+
+          const result = await db.insert(AIOutput).values({
+            formData: formData,
+            templateSlug: slug,
+            aiResponse: aiResp,
+            createdBy: user?.primaryEmailAddress?.emailAddress,
+            createdAt: moment().format('DD/MM/yyyy')
+           
+        })
     }
 
   return (

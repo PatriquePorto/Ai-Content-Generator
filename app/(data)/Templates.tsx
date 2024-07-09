@@ -323,5 +323,21 @@ export default [
         },
       ]
     },
+    {
+      name: "Financial Tips",
+      desc: "An AI tool that writes finance tips based on your questions.",
+      category: "Finance",
+      icon: 'https://cdn-icons-png.flaticon.com/128/4844/4844315.png',
+      aiPrompt: 'Write finance tips based on your question.',
+      slug: 'financial-tips',
+      form: [
+        {
+          label: 'Enter your requirements',
+          field: 'textarea',
+          name: 'requirements',
+          required: true
+        },
+      ]
+    },
   ]
 
