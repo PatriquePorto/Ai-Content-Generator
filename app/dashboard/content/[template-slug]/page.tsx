@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import FormSection from '../_components/FormSection'
 import OutputSection from '../_components/OutputSection'
 import { TEMPLATE } from '../../_components/TemplateListSection'
@@ -23,34 +23,40 @@ interface PROPS {
 /* Function to Create New Content */
 function CreateNewContent (props: PROPS)  {
 
-    const selectedTemplate:TEMPLATE | undefined = Templates?.find((item) => item.slug == props.params['template-slug'])
+    const selectedTemplate : TEMPLATE | undefined = Templates?.find((item) => item.slug == props.params['template-slug'])
     const [loading, setLoading] = useState(false)
-    const [aiOutput, setAiOutput] = useState('')
+    const [aiOutput, setAiOutput] = useState<string>('')
     const { user } = useUser()
+
+     /**
+     * Used to generate content from AI
+     * @param formData 
+     * @returns 
+     */
     const GenerateAIContent = async (formData:any) => {
           setLoading(true)
           const SelectedPrompt = selectedTemplate?.aiPrompt
-
           const FinalAIPrompt=JSON.stringify(formData)+", "+SelectedPrompt
-
           const result = await chatSession.sendMessage(FinalAIPrompt)
 
           setAiOutput(result?.response.text())
-          await SaveInDb(formData, selectedTemplate?.slug, aiOutput)
+          await SaveInDb(JSON.stringify(formData), selectedTemplate?.slug, result?.response.text())
           setLoading(false)
     }
 
-    const SaveInDb = async (formData:any, slug:any, aiResp: string) => {
-
-          const result = await db.insert(AIOutput).values({
+    const SaveInDb = async (formData:any, slug:any, aiResp:string) => {
+        const result = await db.insert(AIOutput).values({
             formData: formData,
             templateSlug: slug,
             aiResponse: aiResp,
             createdBy: user?.primaryEmailAddress?.emailAddress,
-            createdAt: moment().format('DD/MM/yyyy')
-           
+            createdAt: moment().format('DD/MM/yyyy'),
         })
+
+        console.log(result)
     }
+
+
 
   return (
     <div className='p-10'>

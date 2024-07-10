@@ -1,328 +1,352 @@
 export default [
-    {
-      name: "Blog Title",
-      desc: "An AI tool that generates blog titles based on your blog information.",
-      category: "Blog",
-      icon: 'https://cdn-icons-png.flaticon.com/128/3959/3959542.png',
-      aiPrompt: 'Give me 5 blog topic ideas in bullet points only based on the given niche & outline topic and give me the result in Rich Text Editor format.',
-      slug: 'generate-blog-title',
-      form: [
+  {
+    name:'Blog Title',
+    desc:'An AI tool that generate blog title depends on yout blog information',
+    category:'Blog',
+    icon:'https://cdn-icons-png.flaticon.com/128/4186/4186534.png',
+    aiPrompt:'Give me 5 blog topic idea in bullet wise only based on give niche & outline and give me result in Rich text editor format',
+    slug:'generate-blog-title',
+    form:[
         {
-          label: 'Enter your blog niche',
-          field: 'input',
-          name: 'niche',
-          required: true
+            label:'Enter your blog niche',
+            field:'input',
+            name:'niche',
+            required:true
         },
         {
-          label: 'Enter blog outline',
-          field: 'textarea',
-          name: 'outline',
-          required: false
-        },
-      ]
-    },
-    {
-      name: "Blog Content",
-      desc: "An AI tool that generates blog content based on your topic.",
-      category: "Blog",
-      icon: 'https://cdn-icons-png.flaticon.com/128/4905/4905454.png',
-      aiPrompt: 'Generate detailed blog content based on the given topic and outline.',
-      slug: 'generate-blog-content',
-      form: [
-        {
-          label: 'Enter your blog topic',
-          field: 'input',
-          name: 'topic',
-          required: true
-        },
-        {
-          label: 'Enter blog outline here',
-          field: 'textarea',
-          name: 'outline',
-          required: false
-        },
-      ]
-    },
-    {
-      name: "Blog Topic Ideas",
-      desc: "An AI tool that provides blog topic ideas based on your niche.",
-      category: "Blog",
-      icon: 'https://cdn-icons-png.flaticon.com/128/11497/11497847.png',
-      aiPrompt: 'Generate top 5 blog topic ideas in bullet points only, (no Description) vased on niche in rich text editor format.',
-      slug: 'generate-blog-topic-ideas',
-      form: [
-        {
-          label: 'Enter your blog niche',
-          field: 'input',
-          name: 'niche',
-          required: true
-        },
-      ]
-    },
-    {
-      name: "YouTube SEO Title",
-      desc: "An AI tool that generates SEO-friendly YouTube titles based on your video information.",
-      category: "YouTube",
-      icon: 'https://cdn-icons-png.flaticon.com/128/402/402075.png',
-      aiPrompt: 'Generate 5 SEO-friendly YouTube titles based on the given video topic and keywords.',
-      slug: 'generate-youtube-seo-title',
-      form: [
-        {
-          label: 'Enter your youtube video topic keyowords',
-          field: 'input',
-          name: 'topic',
-          required: true
-        },
-        {
-          label: 'Enter youtube description Outline here',
-          field: 'textarea',
-          name: 'outline',
-          required: false
-        },
-      ]
-    },
-    {
-      name: "YouTube Description",
-      desc: "An AI tool that generates YouTube video descriptions based on your video information.",
-      category: "YouTube",
-      icon: 'https://cdn-icons-png.flaticon.com/128/174/174883.png',
-      aiPrompt: 'Generate a detailed YouTube video description based on the given video topic and outline.',
-      slug: 'generate-youtube-description',
-      form: [
-        {
-          label: 'Enter your blog topic/title',
-          field: 'input',
-          name: 'title',
-          required: true
-        },
-        {
-          label: 'Enter video outline',
-          field: 'textarea',
-          name: 'outline',
-          required: false
-        },
-      ]
-    },
-    {
-      name: "YouTube Tags",
-      desc: "An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.",
-      category: "YouTube",
-      icon: 'https://cdn-icons-png.flaticon.com/128/4674/4674918.png',
-      aiPrompt: 'Generate a list of 20 YouTube video tags based on the given video topic and keywords.',
-      slug: 'generate-youtube-tags',
-      form: [
-        {
-          label: 'Enter your youtube title',
-          field: 'input',
-          name: 'title',
-          required: true
-        },
-        {
-          label: 'Enter youtube video outline here (Optional)',
-          field: 'textarea',
-          name: 'outline',
-          required: false
-        },
-      ]
-    },
-    {
-      name: "Rewrite Article (Plagiarism Free)",
-      desc: "An AI tool that rewrites articles to make them plagiarism-free.",
-      category: "Writing",
-      icon: 'https://cdn-icons-png.flaticon.com/128/3131/3131607.png',
-      aiPrompt: 'Rewrite the given article to make it plagiarism-free.',
-      slug: 'rewrite-article',
-      form: [
-        {
-          label: 'Enter your article',
-          field: 'textarea',
-          name: 'article',
-          required: true
-        },
-      ]
-    },
-    {
-      name: "Text Improver",
-      desc: "An AI tool that improves the quality of the given text.",
-      category: "Writing",
-      icon: 'https://cdn-icons-png.flaticon.com/128/1686/1686815.png',
-      aiPrompt: 'Improve the quality of the given text.',
-      slug: 'text-improver',
-      form: [
-        {
-          label: 'Enter your text',
-          field: 'textarea',
-          name: 'text',
-          required: true
-        },
-      ]
-    },
-    {
-      name: "Add Emojis to Text",
-      desc: "An AI tool that adds relevant emojis to your text.",
-      category: "Writing",
-      icon: 'https://cdn-icons-png.flaticon.com/128/2584/2584606.png',
-      aiPrompt: 'Add relevant emojis to the given text.',
-      slug: 'add-emojis-to-text',
-      form: [
-        {
-          label: 'Enter your text',
-          field: 'textarea',
-          name: 'text',
-          required: true
-        },
-      ]
-    },
-    {
-      name: "Instagram Post Generator",
-      desc: "An AI tool that generates Instagram posts based on your input.",
-      category: "Instagram",
-      icon: 'https://cdn-icons-png.flaticon.com/128/15713/15713420.png',
-      aiPrompt: 'Generate an Instagram post based on the given topic and outline.',
-      slug: 'generate-instagram-post',
-      form: [
-        {
-          label: 'Enter keywords for your post',
-          field: 'input',
-          name: 'topic',
-          required: true
+            label:'Enter blog outline',
+            field:'textarea',
+            name:'outline',
+            
         }
-      ]
-    },
-    {
-      name: "Instagram Hashtag Generator",
-      desc: "An AI tool that generates Instagram hashtags based on your topic.",
-      category: "Instagram",
-      icon: 'https://cdn-icons-png.flaticon.com/128/7045/7045432.png',
-      aiPrompt: 'Generate a list of 30 Instagram hashtags based on the given topic.',
-      slug: 'generate-instagram-hashtags',
-      form: [
+    ]
+},
+{
+    name: 'Blog Content',
+    desc: 'An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.',
+    category: 'blog',
+    icon: 'https://cdn-icons-png.flaticon.com/128/4905/4905454.png',
+    slug: 'blog-content-generation',
+    aiPrompt: 'Generate Blog Content based on topic and outline in rich text editor format',
+    form: [
         {
-          label: 'Enter your topic',
-          field: 'input',
-          name: 'topic',
-          required: true
-        },
-      ]
-    },
-    {
-      name: "Instagram Post/Reel Idea",
-      desc: "An AI tool that generates ideas for Instagram posts or reels based on your topic.",
-      category: "Instagram",
-      icon: 'https://cdn-icons-png.flaticon.com/128/1029/1029183.png',
-      aiPrompt: 'Provide 5 ideas for Instagram posts or reels based on the given topic.',
-      slug: 'generate-instagram-post-reel-ideas',
-      form: [
-        {
-          label: 'Enter your topic',
-          field: 'input',
-          name: 'topic',
-          required: true
-        },
-      ]
-    },
-    {
-      name: "English Grammar Check",
-      desc: "An AI tool that checks the grammar of the given text.",
-      category: "Writing",
-      icon: 'https://cdn-icons-png.flaticon.com/128/1029/1029183.png',
-      aiPrompt: 'Check the grammar of the given text and provide corrections.',
-      slug: 'english-grammar-check',
-      form: [
-        {
-          label: 'Enter your text',
-          field: 'textarea',
-          name: 'text',
-          required: true
-        },
-      ]
-    },
-    {
-      name: "Write Code",
-      desc: "An AI tool that writes code based on the given requirements.",
-      category: "Coding",
-      icon: 'https://cdn-icons-png.flaticon.com/128/6062/6062646.png',
-      aiPrompt: 'Write code based on the given requirements.',
-      slug: 'write-code',
-      form: [
-        {
-          label: 'Enter your requirements',
-          field: 'textarea',
-          name: 'requirements',
-          required: true
-        },
-      ]
-    },
-    {
-      name: "Explain Code",
-      desc: "An AI tool that explains the given code.",
-      category: "Coding",
-      icon: 'https://cdn-icons-png.flaticon.com/128/8488/8488751.png',
-      aiPrompt: 'Explain the given code.',
-      slug: 'explain-code',
-      form: [
-        {
-          label: 'Enter your code',
-          field: 'textarea',
-          name: 'code',
-          required: true
-        },
-      ]
-    },
-    {
-      name: "Code Bug Detector",
-      desc: "An AI tool that detects bugs in the given code.",
-      category: "Coding",
-      icon: 'https://cdn-icons-png.flaticon.com/128/8488/8488751.png',
-      aiPrompt: 'Detect bugs in the given code.',
-      slug: 'code-bug-detector',
-      form: [
-        {
-          label: 'Enter your code',
-          field: 'textarea',
-          name: 'code',
-          required: true
-        },
-      ]
-    },
-    {
-      name: "Tagline Generator",
-      desc: "An AI tool that generates taglines based on your product or service.",
-      category: "Marketing",
-      icon: 'https://cdn-icons-png.flaticon.com/128/8488/8488751.png',
-      aiPrompt: 'Generate 5 taglines based on the given product or service description.',
-      slug: 'generate-tagline',
-      form: [
-        {
-          label: 'Enter your product/service description',
-          field: 'textarea',
-          name: 'description',
-          required: true
-        },
-      ]
-    },
-    {
-      name: "Product Description",
-      desc: "An AI tool that generates product descriptions based on your product information.",
-      category: "Marketing",
-      icon: 'https://cdn-icons-png.flaticon.com/128/8488/8488751.png',
-      aiPrompt: 'Generate a product description based on the given product information.',
-      slug: 'generate-product-description',
-      form: [
-        {
-          label: 'Enter your product name',
-          field: 'input',
-          name: 'productName',
-          required: true
+            label: 'Enter your blog topic',
+            field: 'input',
+            name: 'topic',
+            required:true
         },
         {
-          label: 'Enter product features',
-          field: 'textarea',
-          name: 'features',
-          required: false
+            label: 'Enter blog Outline here',
+            field: 'textarea',
+            name: 'outline'
+        }
+    ]
+},
+{
+    name: 'Blog Topic Ideas',
+    desc: 'An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.',
+    category: 'Blog',
+    icon: 'https://cdn-icons-png.flaticon.com/128/11497/11497847.png',
+    slug: 'blog-topic-idea',
+    aiPrompt: 'Generate top 5 Blog Topic Ideas in bullet point only, (no Description) based on niche in rich text editor format',
+    form: [
+        {
+            label: 'Enter your Niche',
+            field: 'input',
+            name: 'niche',
+            required:true
         },
-      ]
-    },
+    ]
+},
+{
+    name: 'Youtube SEO Title',
+    desc: 'An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.',
+    category: 'Youtube Tools',
+    icon: 'https://cdn-icons-png.flaticon.com/128/402/402075.png',
+    slug: 'youtube-seo-title',
+    aiPrompt: 'Give me Best SEO optimized high ranked 5 title ideas bullet wise only bases on keywords and outline and give me result in HTML tags format',
+    form: [
+        {
+            label: 'Enter your youtube video topic keyowords',
+            field: 'input',
+            name: 'keywords',
+            required:true
+        },
+        {
+            label: 'Enter youtube description Outline here',
+            field: 'textarea',
+            name: 'outline'
+        }
+    ]
+
+},
+{
+
+    name: 'Youtube Description',
+    desc: 'An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.',
+    category: 'Youtube Tool',
+    icon: 'https://cdn-icons-png.flaticon.com/128/2111/2111748.png',
+    slug: 'youtube-description',
+    aiPrompt: 'Generate Youtube description with emoji under 4-5 lines based on topic and outline in rich text editor format',
+    form: [
+        {
+            label: 'Enter your blog topic/title',
+            field: 'input',
+            name: 'topic',
+            required:true
+        },
+        {
+            label: 'Enter youtube Outline here',
+            field: 'textarea',
+            name: 'outline'
+        }
+    ]
+},
+{
+    name: 'Youtube Tags',
+    desc: 'An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.',
+    category: 'Youtube Tool',
+    icon: 'https://cdn-icons-png.flaticon.com/128/4674/4674918.png',
+    slug: 'youtube-tag',
+
+    aiPrompt: 'Generate 10 Youtube tags in bullet point based on title and outline in rich text editor format',
+
+    form: [
+        {
+            label: 'Enter your youtube title',
+            field: 'input',
+            name: 'title',
+            required:true
+        },
+        {
+            label: 'Enter youtube video Outline here (Optional)',
+            field: 'textarea',
+            name: 'outline'
+        }
+    ]
+},
+
+{
+    name: 'Rewrite Article (Plagiarism Free)',
+    desc: 'Use this tool to rewrite existing Article or Blog Post which can bypass AI detectors and also make it plagiarism free.',
+    icon: 'https://cdn-icons-png.flaticon.com/128/3131/3131607.png',
+    category: 'Rewriting Tool',
+    slug: 'rewrite-article',
+    aiPrompt: 'Rewrite give article without any Plagiarism in rich text editor format',
+    form: [
+        {
+            label: '🤖 Provide your Article/Blogpost or any other content to rewrite.',
+            field: 'textarea',
+            name: 'article',
+            required:true
+        }
+    ]
+},
+{
+    name: 'Text Improver',
+    desc: 'This handy tool refines your writing, eliminating errors and redundancies for a clear, readable result. It also offers a comprehensive tone analysis and suggests better word choices.',
+    icon: 'https://cdn-icons-png.flaticon.com/128/1686/1686815.png',
+    category: 'Writing Assistant',
+    slug: 'text-improver',
+    aiPrompt: 'Given textToImprove, Rewrite text without any grammar mistake and professionally in rich text editor format',
+    form: [
+        {
+            label: 'Enter text that you want to re-write or improve',
+            field: 'textarea',
+            name: 'textToImprove'
+        }
+    ]
+},
+{
+    name: 'Add Emojis to Text',
+    desc: 'An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.',
+    icon: 'https://cdn-icons-png.flaticon.com/128/2584/2584606.png',
+    category: 'blog',
+    slug: 'add-emoji-to-text',
+    aiPrompt: 'Add Emoji to outline text depends on outline and rewrite it in rich text editor format',
+    form: [
+        {
+            label: 'Enter your text to add emojis',
+            field: 'textarea',
+            name: 'outline',
+            required:true
+        }
+    ]
+},
+{
+    name: 'Instagram Post Generator',
+    desc: 'An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.',
+    icon: 'https://cdn-icons-png.flaticon.com/128/15713/15713420.png',
+    category: 'blog',
+   
+    slug: 'instagram-post-generator',
+    aiPrompt: 'Generate 3 Instagram post depends on a given keywords and give output in  in rich text editor format',
+    form: [
+        {
+            label: 'Enter Keywords for your post',
+            field: 'input',
+            name: 'keywords',
+            required:true
+        },
+       
+    ]
+},
+{
+    name: 'Instagram Hash Tag Generator',
+    desc: 'An AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.',
+    icon: 'https://cdn-icons-png.flaticon.com/128/7045/7045432.png',
+    category: 'blog',
+   
+    slug: 'instagram-hash-tag-generator',
+    aiPrompt: 'Generate 15 Instagram hash tag depends on a given keywords and give output in  in rich text editor format',
+    form: [
+        {
+            label: 'Enter Keywords for your instagram hastag',
+            field: 'input',
+            name: 'keywords',
+            required:true
+        },
+       
+    ]
+},
+{
+    name: 'Instagram Post/Reel Idea',
+    desc: 'An AI tool that generate New and trending instagram idea depends on your niche',
+    icon: 'https://cdn-icons-png.flaticon.com/128/1029/1029183.png',
+    category: 'instagram',
+   
+    slug: 'instagram-post-idea-generator',
+    aiPrompt: 'Generate 5-10 Instagram idea depends on niche with latest trend and give output in  in rich text editor format',
+    form: [
+        {
+            label: 'Enter Keywords / Niche for your instagram idea',
+            field: 'input',
+            name: 'keywords',
+            required:true
+        },
+       
+    ]
+},
+{
+    name: 'English Grammer Check',
+    desc: 'AI Model to Correct your english grammer by providing the text',
+    icon:'https://cdn-icons-png.flaticon.com/128/12596/12596700.png',
+    category: 'english',
+   
+    slug: 'english-grammer-checker',
+    aiPrompt: 'Rewrite the inputText by correcting the grammer and give output in  in rich text editor format',
+    form: [
+        {
+            label: 'Enter text to correct the grammer',
+            field: 'input',
+            name: 'inputText',
+            required:true
+        },
+       
+    ]
+},
+{
+    name: 'Write Code',
+    desc: 'AI Model to generate programming code in any language',
+    icon:'https://cdn-icons-png.flaticon.com/128/6062/6062646.png',
+    category: 'Coding',
+   
+    slug: 'write-code',
+    aiPrompt: 'Depends on user codeDescription write a code and give output in  in rich text editor format in code block ',
+    form: [
+        {
+            label: 'Enter description of code you want along with Programming Lang',
+            field: 'textarea',
+            name: 'codeDesscripton',
+            required:true
+        },
+       
+    ]
+},
+{
+    name: 'Explain Code',
+    desc: 'AI Model to explain programming code in any language',
+    icon:'https://cdn-icons-png.flaticon.com/128/8488/8488751.png',
+    category: 'Coding',
+   
+    slug: 'explain-code',
+    aiPrompt: 'Depends on user codeDescription explain code line by line and give output in  in rich text editor format in code block ',
+    form: [
+        {
+            label: 'Enter code which you want to understand',
+            field: 'textarea',
+            name: 'codeDesscripton',
+            required:true
+        },
+       
+    ]
+},
+{
+    name: 'Code Bug Detector',
+    desc: 'This tool analyzes your input, like error messages and code snippets, to pinpoint and fix bugs, offering detailed solutions and alternatives in a straightforward, user-friendly way.',
+    icon:'https://cdn-icons-png.flaticon.com/128/4426/4426267.png',
+    category: 'code-bug-detector',
+   
+    slug: 'code-bug-detector',
+    aiPrompt: 'Depends on user codeInput find bug in code and give solution and give output in  in rich text editor format in code block ',
+    form: [
+        {
+            label: 'Enter code which you want to test bug',
+            field: 'textarea',
+            name: 'codeInput',
+            required:true
+        },
+       
+    ]
+},
+{
+    name: 'Tagline Generator',
+    desc: 'Struggling to find the perfect tagline for your brand? Let our AI-tool assist you in creating a tagline that stands out.',
+    icon:'https://cdn-icons-png.flaticon.com/128/2178/2178616.png',
+    category: 'Marketting',
+   
+    slug: 'tagline-generator',
+    aiPrompt: 'Depends on user productName and outline generate catchy 5-10 tagline for the business product and give output  in rich text editor format ',
+    form: [
+        {
+            label: 'Product/Brand Name',
+            field: 'input',
+            name: 'productName',
+            required:true
+        },
+        {
+            label: 'What you are selling / Marketting',
+            field: 'textarea',
+            name: 'outline',
+            required:true
+        },
+       
+    ]
+},
+{
+    name: 'Product Description',
+    desc: 'This is your AI-powered SEO expert, creating captivating and keyword-rich e-commerce product descriptions to boost your online sales.',
+    icon:'https://cdn-icons-png.flaticon.com/128/679/679922.png',
+    category: 'Marketting',
+   
+    slug: 'product-description',
+    aiPrompt: 'Depends on user productName and description generate small description for product for e-commer business give output  in rich text editor format  ',
+    form: [
+        {
+            label: 'Product Name',
+            field: 'input',
+            name: 'productName',
+            required:true
+        },
+        {
+            label: 'Product Details',
+            field: 'textarea',
+            name: 'outline',
+            required:true
+        },
+       
+    ]
+},
     {
       name: "Financial Tips",
       desc: "An AI tool that writes finance tips based on your questions.",
