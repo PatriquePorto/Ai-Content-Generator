@@ -1,16 +1,18 @@
 "use client"
-
 import { Button } from '@/components/ui/button';
 import { db } from '@/utils/db';
 import { AIOutput } from '@/utils/schema';
 import { useUser } from '@clerk/nextjs';
-import React, { useState, useEffect } from 'react';
-import { HISTORY } from '../history/page';
 
-async function UsageTrack () {
+import { eq } from 'drizzle-orm';
+import React, { useState, useEffect, useContext } from 'react';
+import { HISTORY } from '../history/page';
+import { TotalUsageContext } from '@/app/(context)/TotalUsageContext';
+
+ function UsageTrack () {
 
     const { user } = useUser();
-    const [totalUsage, setTotalUsage] = useState<number>(0);
+    const {totalUsage, setTotalUsage} = useContext(TotalUsageContext)
 
     useEffect(() => {
        user && GetData()

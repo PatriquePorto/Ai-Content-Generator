@@ -12,6 +12,8 @@ import { db } from '@/utils/db'
 import { AIOutput } from '@/utils/schema'
 import { useUser } from '@clerk/nextjs'
 import moment from 'moment'
+import { TotalUsageContext } from '@/app/(context)/TotalUsageContext'
+import { useRouter } from 'next/router'
 
 interface PROPS {
 
@@ -27,13 +29,18 @@ function CreateNewContent (props: PROPS)  {
     const [loading, setLoading] = useState(false)
     const [aiOutput, setAiOutput] = useState<string>('')
     const { user } = useUser()
+    const router = useRouter()
+    const { totalUsage, setTotalUsage } = useContext(TotalUsageContext)
 
-     /**
-     * Used to generate content from AI
-     * @param formData 
-     * @returns 
-     */
+
+    /* Function to Generate AI Content */
     const GenerateAIContent = async (formData:any) => {
+        if(totalUsage >= 1000){
+            console.log("Limit Exceeded")
+            router.push('/dashboard/billing')
+            return 
+        }
+  
           setLoading(true)
           const SelectedPrompt = selectedTemplate?.aiPrompt
           const FinalAIPrompt=JSON.stringify(formData)+", "+SelectedPrompt
