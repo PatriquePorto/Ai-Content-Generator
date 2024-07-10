@@ -44,6 +44,7 @@ function CreateNewContent (props: PROPS)  {
           setLoading(false)
     }
 
+    /*Function to save in DB*/
     const SaveInDb = async (formData:any, slug:any, aiResp:string) => {
         const result = await db.insert(AIOutput).values({
             formData: formData,

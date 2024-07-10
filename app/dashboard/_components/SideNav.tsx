@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import Image from 'next/image'
 import { FileClock, Home, Icon, Settings, WalletCards } from 'lucide-react'
 import { usePathname } from 'next/navigation'
+import UsageTrack from './UsageTrack'
 
 const SideNav = () => {
 
@@ -54,6 +55,9 @@ const SideNav = () => {
 
           ))}        
        </div>
+        <div className='absolute bottom-10 left-0 w-full'>
+            <UsageTrack/>
+        </div>
     </div>
   )
 }
